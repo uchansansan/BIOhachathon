@@ -26,6 +26,7 @@ class Ui_MainWindow(object):
         self.pushButton.setObjectName("pushButton")
         self.pushButton.setCheckable(True)
         self.pushButton.clicked.connect(self.SaveSeq)
+        self.pushButton.setStyleSheet("background-color: green")
 
         self.lineEdit_2 = QtWidgets.QLineEdit(self.centralwidget)
         self.lineEdit_2.setGeometry(QtCore.QRect(60, 130, 461, 25))

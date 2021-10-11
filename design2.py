@@ -15,6 +15,7 @@ class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
         MainWindow.resize(774, 480)
+
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
 
@@ -27,6 +28,7 @@ class Ui_MainWindow(object):
         self.pushButton.setObjectName("pushButton")
         self.pushButton.setCheckable(True)
         self.pushButton.clicked.connect(self.SaveSeq)
+        self.pushButton.setStyleSheet("background-color: #097770; color: white")
 
         self.lineEdit_2 = QtWidgets.QLineEdit(self.centralwidget)
         self.lineEdit_2.setGeometry(QtCore.QRect(60, 130, 461, 25))
@@ -37,10 +39,12 @@ class Ui_MainWindow(object):
         self.pushButton_2.setObjectName("pushButton_2")
         self.pushButton_2.setCheckable(True)
         self.pushButton_2.clicked.connect(self.SaveSite)
+        self.pushButton_2.setStyleSheet("background-color: #097770; color: white")
 
         self.label = QtWidgets.QLabel(self.centralwidget)
         self.label.setGeometry(QtCore.QRect(60, 110, 191, 17))
         self.label.setObjectName("label")
+        self.label.setStyleSheet("color: #097770; background-color: #e0cdbe")
 
         self.label_2 = QtWidgets.QLabel(self.centralwidget)
         self.label_2.setGeometry(QtCore.QRect(60, 30, 191, 17))
@@ -65,7 +69,7 @@ class Ui_MainWindow(object):
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
-        MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
+        MainWindow.setWindowTitle(_translate("MainWindow", "Sequence anaziler"))
         self.pushButton.setText(_translate("MainWindow", "Enter"))
         self.pushButton_2.setText(_translate("MainWindow", "Enter"))
         self.label.setText(_translate("MainWindow", "Enter restriction site name:"))

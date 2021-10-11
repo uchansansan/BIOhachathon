@@ -9,6 +9,7 @@ class ExampleApp(QtWidgets.QMainWindow, design.Ui_MainWindow):
         self.setupUi(self)
         self.sequence = 0
         self.site = 0
+        self.setStyleSheet("background-color: #e0cdbe;")
 
     def SaveSeq(self):
         if self.pushButton.isChecked():
@@ -25,9 +26,9 @@ class ExampleApp(QtWidgets.QMainWindow, design.Ui_MainWindow):
 
 def main():
     app = QtWidgets.QApplication(sys.argv)
+
     window = ExampleApp()
     window.show()
-    #window.SaveSequance()
     app.exec_()
 
 
